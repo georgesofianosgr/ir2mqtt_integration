@@ -123,6 +123,13 @@ BINARY_SENSOR_DEFINITIONS = {
         "payload_off": "False",
         "icon": "mdi:tire",
     },
+    "penalty_flag": {
+        "name": "Penalty Flag",
+        "value_template": "{{ value_json.get('penalty_flag', False) }}",
+        "payload_on": "True",
+        "payload_off": "False",
+        "icon": "mdi:alert",
+    },
     "flag_checkered": {
         "name": "Checkered Flag",
         "value_template": "{{ 'Checkered' in value_json.get('active_flags', []) }}",
